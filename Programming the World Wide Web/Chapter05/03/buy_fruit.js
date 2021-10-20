@@ -2,6 +2,8 @@ var cost = 0;
 
 function click_chk(price) {
     cost += parseInt(price);
+
+    return false;
 }
 
 function click_buy() {
