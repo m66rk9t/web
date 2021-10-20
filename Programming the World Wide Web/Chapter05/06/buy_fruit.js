@@ -5,7 +5,7 @@ function chk_apple() {
     var dom = document.getElementById("apple");
     var num = parseInt(dom.value);
 
-    if (dom.value.search(/^\d*&/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
+    if (dom.value.search(/^\d*$/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
         alert("The number of apple is invalid.\nPlease enter an integer from 0 to 99.\n");
         return false;
     }
@@ -20,7 +20,7 @@ function chk_orange() {
     var dom = document.getElementById("orange");
     var num = parseInt(dom.value);
 
-    if (dom.value.search(/^\d*&/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
+    if (dom.value.search(/^\d*$/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
         alert("The number of orange is invalid.\nPlease enter an integer from 0 to 99.\n");
         return false;
     }
@@ -35,7 +35,7 @@ function chk_banana() {
     var dom = document.getElementById("banana");
     var num = parseInt(dom.value);
 
-    if (dom.value.search(/^\d*&/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
+    if (dom.value.search(/^\d*$/) != 0 || (num < parseInt(dom.min) || num > parseInt(dom.max))) {
         alert("The number of banana is invalid.\nPlease enter an integer from 0 to 99.\n");
         return false;
     }
