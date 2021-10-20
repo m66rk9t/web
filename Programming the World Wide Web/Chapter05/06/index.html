@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>买水果</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="buy_fruit.js"></script>
+</head>
+
+<body>
+    <form name="myForm" id="myForm" action="" onsubmit="total_cost()">
+        <p>
+            <label>
+                Apple<input type="text" name="apple" id="apple" min="0" max="99" onchange="chk_apple()" />
+            </label><br />
+            <label>
+                Orange<input type="text" name="orange" id="orange" min="0" max="99" onchange="chk_orange()" />
+            </label><br />
+            <label>
+                Banana<input type="text" name="banana" id="banana" min="0" max="99" onchange="chk_banana()" />
+            </label><br />
+            <label>
+                <input type="submit" value="BUY" />
+            </label>
+        </p>
+    </form>
+</body>
+
+</html>
