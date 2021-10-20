@@ -1,4 +1,4 @@
 function rad_click(event) {
-    var dom = event.currentTarget;
-    alert(dom.value);
+    var color = event.currentTarget.value;
+    alert("Your favorite color is "+ color + ".\n");
 }
