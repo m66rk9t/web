@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>个人信息</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="info.js"></script>
+</head>
+
+<body>
+    <form name="myForm" id="myForm" action="" onsubmit="chk_valid()">
+        <p>
+            <label>
+                名：<input type="text" id="fname" name="fname" />
+            </label><br />
+            <label>
+                姓：<input type="text" id="lname" name="lname" />
+            </label><br />
+            <label>
+                中间名：<input type="text" id="midname" name="midname" />
+            </label><br />
+            <label>
+                年龄：<input type="text" id="age" name="age" min="17" />
+            </label><br />
+            <label>
+                体重：<input type="text" id="weight" name="weight" min="80" max="300" />
+            </label><br />
+            <label>
+                <input type="submit" value="提交" />
+                <input type="reset" value="清空" />
+            </label>
+        </p>
+    </form>
+</body>
+
+</html>
