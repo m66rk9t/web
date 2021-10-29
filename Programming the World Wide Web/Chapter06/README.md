@@ -54,4 +54,53 @@
 
 #### 10 修改09的文档，使得这组语句每移动五步（假定每次移动长度为1像素）后，文本颜色就变为红色，再次移动五步后，文本颜色又变为蓝色，并持续这种方式。
 
-#### 11 修改6.10节的mover示例，输入要移动元素的起始位置和终止位置。
+#### 11 修改以下示例，输入要移动元素的起始位置和终止位置。
+
+```HTML
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title> Moving text </title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="moveText.js">
+    </script>
+</head>
+
+<body onload="initText()">
+    <p>
+        <span id='theText' style="position: absolute; left: 100px; top: 100px; 
+    font: bold 1.7em 'Times Roman'; 
+    color: blue;"> Jump in the lake!
+        </span>
+    </p>
+</body>
+
+</html>
+```
+
+```JavaScript
+var dom, x, y, finalx = 300, finaly = 300;
+function initText() {
+    dom = document.getElementById('theText').style;
+    var x = dom.left;
+    var y = dom.top;
+    x = parseInt(x);
+    y = parseInt(y);
+    moveText(x, y);
+}
+
+function moveText(x, y) {
+    if (x != finalx)
+        if (x > finalx) x--;
+        else if (x < finalx) x++;
+    if (y != finaly)
+        if (y > finaly) y--;
+        else if (y < finaly) y++;
+    if ((x != finalx) || (y != finaly)) {
+        dom.left = x + "px";
+        dom.top = y + "px";
+        setTimeout("moveText(" + x + "," + y + ")", 1);
+    }
+}
+```
