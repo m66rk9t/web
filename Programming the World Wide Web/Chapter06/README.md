@@ -80,6 +80,7 @@
 ```
 
 ```JavaScript
+/*moveText.js*/
 var dom, x, y, finalx = 300, finaly = 300;
 function initText() {
     dom = document.getElementById('theText').style;
