@@ -1,3 +1,3 @@
 function displayImg(num) {
-    document.getElementById("display").src = "img"+num.toString()+".jpg";
+    document.getElementById("display").src = "img" + num + ".jpg";
 }
