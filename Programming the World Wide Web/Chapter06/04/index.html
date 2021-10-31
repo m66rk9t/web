@@ -6,16 +6,24 @@
     <meta charset="utf-8" />
     <script type="text/javascript" src="changeStyle.js"></script>
     <style type="text/css">
-        h3 {text-align: center;}
-        .myHouse {text-align: center;}
+        .myHouse {
+            padding: 15px;
+            margin: 15px;
+            background-color: darkgray;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h3>My House</h3>
-    <p class="myHouse">
-        My house 
-    </p>
+    <h3 style="text-align:center;">My House</h3>
+    <div class="myHouse">
+        My house is located in a remote country, <span id="innerText1" onmouseover="changeText(1)">painted with blue paint,</span><br />
+        with two balconies. There is a lawn in front of the yard, I also <br />
+        have a dog and a cat. Many vegetables and fruits <span id="innerText2" onmouseover="changeText(2)">are grown in the<br />
+        backyard.</span> The house is warm in winter and cool in summer, It is <span id="innerText3" onmouseover="changeText(3)">a<br />
+        good place for elderly care.</span>
+    </div>
 </body>
 
 </html>
