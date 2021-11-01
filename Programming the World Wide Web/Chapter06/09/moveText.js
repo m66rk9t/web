@@ -3,7 +3,7 @@ var dom, x, finalX = 1295;
 function initCoord() {
     dom = document.getElementById("txtBtn").style;
     x = parseInt(dom.left);
-    scrollText(x);
+    scrollText();
 }
 
 function scrollText() {
