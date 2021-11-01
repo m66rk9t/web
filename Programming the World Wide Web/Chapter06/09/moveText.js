@@ -3,14 +3,14 @@ var dom, x, finalX = 1295;
 function initCoord() {
     dom = document.getElementById("txtBtn").style;
     x = parseInt(dom.left);
-    scrollText();
+    scrollAdvance();
 }
 
-function scrollText() {
+function scrollAdvance() {
     if (x < finalX) {
         x++;
         dom.left = x + "px";
-        setTimeout("scrollText()", 1);
+        setTimeout("scrollAdvance()", 1);
     }
     else {
         scrollBack();
@@ -24,6 +24,6 @@ function scrollBack() {
         setTimeout("scrollBack()", 1);
     }
     else {
-        scrollText();
+        scrollAdvance();
     }
 }
