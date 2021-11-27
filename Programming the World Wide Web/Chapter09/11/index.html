@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PopMusic!</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h2>What is Your Favourite Pop Music?</h2>
+    <form action="getmusic.php" method="post">
+        <p>
+            <label>Music Title:
+                <input type="text" name="title" />
+            </label><br />
+            <label>Composer:
+                <input type="text" name="composer" />
+            </label><br />
+            <label>Performer:
+                <input type="text" name="performer"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="submit" value="Submit" />
+            </label>
+            <label>
+                <input type="reset" value="Reset" />
+            </label>
+        </p>
+        <a href="printmusic.php">Print!</a>
+    </form>
+</body>
+
+</html>
