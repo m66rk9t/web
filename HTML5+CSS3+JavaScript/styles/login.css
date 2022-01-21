@@ -2,13 +2,21 @@ body {
     background-color: rgb(99, 180, 235);
 }
 
+#logo {
+    position: absolute;
+    padding: 0px;
+    font-size: 50px;
+    color: #ffffff;
+    width: auto;
+}
+
 #loginbox {
-    background-color: #ffffff;
     position: absolute;
     right: 75px;
     top: 75px;
     height: 450px;
     width: 400px;
+    background-color: #ffffff;
     border: 5px solid #ffffff;
     border-radius: 45px;
 }
@@ -55,10 +63,11 @@ body {
 }
 
 #helptxt {
+    position: relative;
+    padding: 0px;
+    margin: 10px 150px;
+    text-align: center;
+    width: 50px;
     color: #499feb;
     font-size: 15px;
-    width: 50px;
-    text-align: center;
-    position: relative;
-    margin: 10px 150px;
 }
