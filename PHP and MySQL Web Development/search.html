@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book-O-Rama Catalog Search</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1>Book-O-Rama Catalog Search</h1>
+    <form action="results.php" method="post">
+        <p><strong>Choose Search Type:</strong>
+            <label>
+                <select name="searchtype">
+                    <option value="Author">Author</option>
+                    <option value="Title">Title</option>
+                    <option value="ISBN">ISBN</option>
+                </select>
+            </label>
+        </p>
+        <p><strong>Enter Search Term:</strong>
+            <label>
+                <input type="text" name="searchterm" size="40"/>
+                <input type="submit" name="Submit" value="Search"/>
+            </label>
+        </p>
+    </form>
+</body>
+
+</html>
