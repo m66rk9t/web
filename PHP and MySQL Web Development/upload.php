@@ -56,7 +56,7 @@
 
     echo "File uploaded sucessfully.";
     echo "<p>You uploaded the following image:<br /></p>\n";
-    echo "<img src=\"../../data/uploads/".$_FILES["the_file"]["name"]."\" />";
+    echo "<img src=\"data/uploads/".$_FILES["the_file"]["name"]."\" />";
     ?>
 </body>
 
