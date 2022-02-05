@@ -41,7 +41,7 @@
         echo "Problem: file is not a PNG image.";
         exit;
     }
-
+    ////Replace YourDirectory with your directory
     $uploaded_file = "YourDirectory".$_FILES["the_file"]["name"];
 
     if (is_uploaded_file($_FILES["the_file"]["tmp_name"])) {
