@@ -42,7 +42,7 @@
         exit;
     }
 
-    $uploaded_file = "L:/Website/data/uploads/".$_FILES["the_file"]["name"];
+    $uploaded_file = "YourDirectory".$_FILES["the_file"]["name"];
 
     if (is_uploaded_file($_FILES["the_file"]["tmp_name"])) {
         if (!move_uploaded_file($_FILES["the_file"]["tmp_name"], $uploaded_file)) {
