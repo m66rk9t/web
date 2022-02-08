@@ -7,7 +7,7 @@ $year = 1921;
 
 //计算出生日期的时间戳
 $bday = mktime(0,0,0,$month,$day,$year);
-//计算当前日期的时间吹
+//计算当前日期的时间戳
 $now = time();
 //求差
 $age = $now - $bday;
