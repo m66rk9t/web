@@ -14,7 +14,7 @@ imagestring($im, 4, 50, 150, 'Sales', $white);
 //输出图像
 header("Content-Type: image/png");
 imagepng($im);//调用此函数后，会将图像输出至浏览器
-imagepng($im, "L:/Website/myfitst.png");//调用此函数后，不会将图像输出至浏览器，会保存图像至指定位置
+imagepng($im, "YourDirectory");//调用此函数后，不会将图像输出至浏览器，会保存图像至指定位置
 
 //清空资源
 imagedestroy($im);
