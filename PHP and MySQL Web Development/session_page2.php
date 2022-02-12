@@ -2,8 +2,10 @@
 //启动会话
 session_start();
 
-//使用会话变量
-echo "<p>The content of \$_SESSSION['session_var'] is ".$_SESSION["session_var"]."</p>";
+//判断会话变量是否存在
+if (isset($_SESSION["session_var"])) {
+    echo "<p>The content of \$_SESSSION['session_var'] is ".$_SESSION["session_var"]."</p>";
+}
 
 //销毁会话变量
 unset($_SESSION["session_var"]);
