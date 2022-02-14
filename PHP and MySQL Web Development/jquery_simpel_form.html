@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="uft-8" />
+    <title>Simple Form</title>
+    <script type="text/javascript" src="../scripts/jquery/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="func()">
+        <label for="first_name">First Name</label><br />
+        <input type="text" id="first_name" name="name[first]" class="name" placeholder=""/><br />
+        <label for="last_name">Last Name</label><br />
+        <input type="text" id="last_name" name="name[last]" class="name" placeholder=""/><br />
+        <button type="submit">Submit</button>
+    </form>
+    <hr />
+    <div id="webConsole">
+        <h3>Web Console</h3>
+    </div>
+    <script type="text/javascript">
+        /* 实时更新内容 */
+        var webConsole = function (msg) {
+            var myConsole = $("#webConsole");
+            var newMessage = $("<p>").text(msg);
+            myConsole.append(newMessage);//追加内容
+        }
+
+        $(document).on("ready", function () {
+            $("#first_name").attr("placeholder", "Johnny");
+            $("#last_name").attr("placeholder", "Appleseed");
+        });
+
+        /* 处理提交事件 */
+        $("#myForm").on("submit", function (event) {
+            var first_name = $("#first_name").val();
+            var last_name = $("#last_name").val();
+            webConsole("The form was submitted");
+            alert("Hello, " + first_name + " " + last_name + "!");
+        });
+
+        /* 获取表单域数据并实时输出 */
+        $(".name").on("focusout", function (event) {
+            var nameField = $(event.target);
+            webConsole("Name field '" + nameField.attr("id") + "' was updated to '" + nameField.val() + "'");
+        });
+    </script>
+</body>
+
+</html>
