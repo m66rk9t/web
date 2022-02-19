@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <title>测试</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid black;
+            background-color: rgb(226, 225, 225);
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript" src="scripts/jquery/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">查询所有申请</button>
+    <hr />
+    <table id="applTable">
+        <tr id="header">
+            <th>申请表ID</th><th>申请人ID</th><th>申请设备数量</th><th>借用起始时间</th><th>借用结束时间</th>
+            <th>设备申请描述</th><th>创建时间</th><th>状态</th><th>处理人</th><th>处理时间</th>
+        </tr>
+    </table>
+    <script>
+        $("#btn").on("click", function () {
+            if ($(".applInfo").length == 0) {
+                $.getJSON("getAppl.php", function (jsonData) {
+                    var insert = $("#applTable");
+                    $.each(jsonData, function (objectName, objectInfo) {
+                        $.each(objectInfo, function (name, values) {
+                            insert.append(
+                                "<tr class='applInfo'><td>" + values.ApplID + "</td>" +
+                                "<td>" + values.UserID + "</td>" +
+                                "<td>" + values.ApplQty + "</td>" +
+                                "<td>" + values.LendBegn + "</td>" +
+                                "<td>" + values.LendEnd + "</td>" +
+                                "<td>" + values.ApplDesc + "</td>" +
+                                "<td>" + values.ApplCre + "</td>" +
+                                "<td>" + values.ApplStat + "</td>" +
+                                "<td>" + values.DspUser + "</td>" +
+                                "<td>" + values.DspDate + "</td></tr>"
+                            );
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
